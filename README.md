@@ -82,11 +82,14 @@ The getResponsive() selector returns the `responsive` object.
 
 - top-level redux store
     - `responsive`
-        - `mediaType`: (*string*) The largest breakpoint category that the viewport satisfies.
-        - `orientation`: (*string*) The viewport orientation. Has three possible values: "portrait", "landscape", or `null`.
-        - `lessThan`: (*object*) An object keyed by breakpoint name with values of booleans that indicate whether the viewport is currently less than the breakpoint.
+        - `breakpoints`: (*object*) A duplicate of the developer-defined breakpoints object. An object keyed by breakpoint name with values of the pixel width of the breakpoint.
+        - `dimensions`: {*object*} An object with keys `width` and `height` and values of the current width and height of the viewport.
         - `greaterThan`: (*object*) An object keyed by breakpoint name with values of booleans that indicate whether the viewport is currently greater than the breakpoint.
         - `is`: (*object*) An object keyed by breakpoint name with values of booleans that indicate whether the viewport is currently that particular breakpoint.
+        - `lessThan`: (*object*) An object keyed by breakpoint name with values of booleans that indicate whether the viewport is currently less than the breakpoint.
+        - `mediaType`: (*string*) The largest breakpoint category that the viewport satisfies.
+        - `orientation`: (*string*) The viewport orientation. Has three possible values: "portrait", "landscape", or `null`.
+
 
 Using the object returned from the getResponsive() selector, you can access the viewport's current media type like so:
 
