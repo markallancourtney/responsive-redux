@@ -1,5 +1,5 @@
 # responsive-redux
-Responsive state management for redux. Works with React and React Native.
+Responsive state management for Redux. Works with React and React Native.
 
 #### React example code
 <a href="https://github.com/markallancourtney/responsive-redux-example-react-web" target="_blank">
@@ -77,10 +77,10 @@ export default connect(mapStateToProps)(MyComponent)
 
 # The Responsive State
 
-The reducer provided by `responsive-redux` adds the following to the redux store.
+The reducer provided by `responsive-redux` adds the following to the Redux store.
 The getResponsive() selector returns the `responsive` object.
 
-- top-level redux store
+- top-level Redux store
     - `responsive`
         - `breakpoints`: (*object*) A duplicate of the developer-defined breakpoints object. An object keyed by breakpoint name with values of the pixel width of the breakpoint.
         - `dimensions`: {*object*} An object with keys `width` and `height` and values of the current width and height of the viewport.
