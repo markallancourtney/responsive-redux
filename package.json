@@ -1,6 +1,6 @@
 {
   "name": "responsive-redux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Responsive state management for redux. Works with React and React Native.",
   "main": "index.js",
   "standard": {
