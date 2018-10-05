@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "standard",
+    "standard-react"
+  ],
+  "parser": "babel-eslint",
+  "plugins": [
+    "prettier"
+  ],
+  "env": {},
+  "rules": {
+    "react/jsx-indent-props": 1,
+    "react/jsx-no-bind": 0
+  },
+  "settings": {}
+}

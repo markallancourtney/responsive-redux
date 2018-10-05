@@ -1,0 +1,36 @@
+{
+  // https://hackernoon.com/configure-eslint-prettier-and-flow-in-vs-code-for-react-development-c9d95db07213
+  // Format a file on save. A formatter must be available, the file must not be auto-saved, and editor must not be shutting down.
+  // "editor.formatOnSave": true,
+  // "[javascript]": {
+  //   "editor.formatOnSave": false
+  // },
+  // "eslint.autoFixOnSave": true,
+  // Enable/disable default JavaScript formatter (For Prettier)
+  // "javascript.format.enable": true,
+  // Use 'prettier-eslint' instead of 'prettier'.
+  // Other settings will only be fallbacks in case they could not be inferred from eslint rules.
+  // "prettier.eslintIntegration": true,
+  // "standard.enable": true,
+  // "standard.run": "onSave",
+  // "standard.autoFixOnSave": true,
+  // "standard.options": {
+  //   "globals": ["$", "jQuery", "fetch"],
+  //   "ignore": [
+  //     "node_modules/**"
+  //   ],
+  //   "plugins": ["html"],
+  //   "parser": "babel-eslint",
+  //   "envs": ["jest"]
+  // },
+  // "eslint.enable": true,
+  // "eslint.autoFixOnSave": true,
+  //  "eslint.alwaysShowStatus": true,
+  "search.exclude": {
+    "USE_GITIGNORE": true
+  },
+  "files.exclude": {
+    "node_modules/": true,
+    "**/._*": true
+  }
+}
