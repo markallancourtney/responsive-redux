@@ -22,4 +22,8 @@ yarn-error.log*
 
 #######
 
+# git ignore the build directory
 /lib
+
+# the byproduct of running `npm pack`
+responsive-redux-*.tgz
