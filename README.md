@@ -2,19 +2,22 @@
 Responsive state management for redux. Works with React and React Native.
 
 #### React example code
-https://github.com/markallancourtney/responsive-redux-example-react-web
+<a href="https://github.com/markallancourtney/responsive-redux-example-react-web" target="_blank">
+    https://github.com/markallancourtney/responsive-redux-example-react-web
+</a>
 
 #### React Native example code
-https://github.com/markallancourtney/responsive-redux-example-react-native
+<a href="https://github.com/markallancourtney/responsive-redux-example-react-native" target="_blank">
+    https://github.com/markallancourtney/responsive-redux-example-react-native
+</a>
 
 
 # Features
 - Developer defined breakpoints
-- One place in code that calculates the current breakpoint
 - Uses just one event listener
-- Uses [reselect](https://github.com/reduxjs/reselect) to provide a single source for getting responsive state
-
-
+- One place in code that calculates the current breakpoint
+- Uses [reselect](https://github.com/reduxjs/reselect) style selector to provide a single source for getting responsive state
+- Same library works in React and React Native
 
 # Example
 
@@ -25,13 +28,15 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { getResponsive } from 'responsive-redux'
 
+// optional for React Native
+import { View, Text } from 'react-native'
 
 class MyComponent extends React.Component {
     render() {
         // grab the responsive state off of props
         const { responsive } = this.props
 
-        let message = `The viewport's current media type is: ${responsive.mediaType}.`
+        let message = `The viewport's current media type is: ${responsive.mediaType}. `
 
         if (responsive.lessThan.small) {
             message += 'Secret message for viewports smaller than than the "small" breakpoint!'
@@ -41,6 +46,14 @@ class MyComponent extends React.Component {
             message += 'Message for viewports greater than the "medium" breakpoint.'
         }
 
+        // React Native
+        return (
+            <View>
+                <Text>{message}</Text>
+            </View>
+        )
+
+        // React web
         return (
             <p>
                 {message}
@@ -65,7 +78,7 @@ export default connect(mapStateToProps)(MyComponent)
 # The Responsive State
 
 The reducer provided by `responsive-redux` adds the following to the redux store.
-The getResponsive() selector returns this `responsive` object.
+The getResponsive() selector returns the `responsive` object.
 
 - top-level redux store
     - `responsive`
@@ -104,3 +117,9 @@ Breakpoints are defined by you, the developer. See the links to React and React 
 ### The Infinity Media Type
 
 When the viewport is wider than the largest breakpoint, its `mediaType` value is `infinity`.
+
+---
+
+### Thanks
+
+This project was inspired by <a href="https://github.com/AlecAivazis/redux-responsive" target="_blank">redux-responsive</a>

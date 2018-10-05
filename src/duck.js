@@ -17,7 +17,7 @@ const defaultOrientation = null
  * Actions
  ******************************************************************************/
 
-const CALCULATE_RESPONSIVE_STATE = 'redux-responsive/CALCULATE_RESPONSIVE_STATE'
+const CALCULATE_RESPONSIVE_STATE = 'responsive-redux/CALCULATE_RESPONSIVE_STATE'
 
 /*******************************************************************************
  * Action Creators
@@ -86,10 +86,10 @@ export default handleActions(
  *
  * state = {
  *    breakpoints: {
- *        extraSmall: 480,
- *        large: 1200,
- *        medium: 992,
- *        small: 768,
+ *        extraSmall: integer,
+ *        large: integer,
+ *        medium: integer,
+ *        small: integer,
  *    },
  *    greaterThan: {
  *        extraSmall: boolean,
