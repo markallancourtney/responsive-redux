@@ -2,7 +2,7 @@
 
 Responsive state management for Redux. Works with React and React Native.
 
-#Installation
+# Installation
 
 Install `responsive-redux` with npm.
 
@@ -18,7 +18,7 @@ npm install --save responsive-redux
 - One place in code that calculates the current breakpoint
 - Uses [reselect](https://github.com/reduxjs/reselect) style selector to provide a single source for getting responsive state
 
-#Examples
+# Examples
 
 #### React example code
 
